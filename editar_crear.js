@@ -1,12 +1,13 @@
+
 const API_URL = 'http://localhost:8080/series';
 let editingId = null;
+
 
 // Cargar datos al iniciar
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('seriesForm').addEventListener('submit', handleFormSubmit);
     document.getElementById('cancelButton').addEventListener('click', goBack);
     
-    // Verificar si estamos editando
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     
@@ -23,7 +24,6 @@ async function loadSeriesForEdit(id) {
         
         const series = await response.json();
         
-        // Llenar formulario
         document.getElementById('name').value = series.name;
         document.getElementById('description').value = series.description;
         document.getElementById('imageUrl').value = series.image_url;
@@ -54,14 +54,12 @@ async function handleFormSubmit(e) {
     try {
         let response;
         if (editingId) {
-            // Actualizar
             response = await fetch(`${API_URL}/${editingId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
         } else {
-            // Crear
             response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

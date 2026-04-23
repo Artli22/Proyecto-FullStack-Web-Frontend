@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Series</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <div>
+    <div class="container">
+        <div class="header">
             <h1>Gestor de Series</h1>
-            <button id="createButton">+ Nueva Serie</button>
+            <button id="createButton" class="button-primary">+ Nueva Serie</button>
         </div>
 
-        <div>
-            <div id="seriesList">
-                <p>Cargando series...</p>
+        <div class="controls-section">
+            <div class="search-group">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+            </div>
+            
+            <div class="sort-group">
+                <select id="sortSelect">
+                    <option value="id">Ordenar por ID</option>
+                    <option value="name">Ordenar por Nombre</option>
+                    <option value="current_episode">Ordenar por Episodio Actual</option>
+                    <option value="total_episodes">Ordenar por Total de Episodios</option>
+                </select>
+                
+                <select id="orderSelect">
+                    <option value="asc">Ascendente</option>
+                    <option value="desc">Descendente</option>
+                </select>
+            </div>
+            
+            <div class="pagination-group">
+                <select id="limitSelect">
+                    <option value="5">5 por página</option>
+                    <option value="10" selected>10 por página</option>
+                    <option value="20">20 por página</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="series-section">
+            <div id="seriesList" class="series-list">
+                <p class="loading">Cargando series...</p>
+            </div>
+            
+            <div id="paginationControls" class="pagination-controls">
             </div>
         </div>
     </div>
