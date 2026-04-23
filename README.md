@@ -18,5 +18,5 @@
 <img width="1916" height="944" alt="image" src="https://github.com/user-attachments/assets/66c11d48-4039-412f-8159-427870ef5d66" />
 
 ### Link de repositorio adjunto
-[Texto del enlace](https://github.com/Artli22/Proyecto-FullStack-Web-Backend.git)
+[Enlace a Repositorio Backend](https://github.com/Artli22/Proyecto-FullStack-Web-Backend.git)
 #### Importante: El listado de challenges implementados en el proyecto estan en el readme del backend 
