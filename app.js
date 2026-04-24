@@ -1,5 +1,5 @@
 
-const API_URL = 'https://proyecto-full-stack-web-backend.vercel.app/';
+const API_URL = 'proyecto-fullstack-web-backend-production.up.railway.app';
 let allSeries = [];
 let currentPage = 1;
 let currentLimit = 10;
