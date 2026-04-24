@@ -1,5 +1,5 @@
 
-const API_URL = 'proyecto-fullstack-web-backend-production.up.railway.app';
+const API_URL = 'proyecto-fullstack-web-backend-production.up.railway.app/api';
 let allSeries = [];
 let currentPage = 1;
 let currentLimit = 10;
