@@ -1,5 +1,5 @@
 
-const API_URL = 'https://proyecto-full-stack-web-backend-swart.vercel.app/series';
+const API_URL = 'https://proyecto-full-stack-web-backend.vercel.app/series';
 let editingId = null;
 
 
