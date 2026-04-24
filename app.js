@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:8080/series';
+const API_URL = 'https://proyecto-full-stack-web-backend.vercel.app/';
 let allSeries = [];
 let currentPage = 1;
 let currentLimit = 10;
